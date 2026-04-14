@@ -1,10 +1,37 @@
 name: notification-ai-mcp
-description: "MEOK AI Labs — notification-ai-mcp"
-vendor: MEOK AI Labs
-homepage: https://meok.ai
-repository: https://github.com/CSOAI-ORG/notification-ai-mcp
-license: MIT
-categories: [Communication, Automation]
-tags: [notifications, push-notification, alerts, messaging, event-notification]
-runtime: python
-entrypoint: server.py
+description: "notification-ai-mcp \u2014 Built by [MEOK AI Labs](https://meok.ai)"
+version: 1.0.0
+tools:
+- name: send_webhook
+  description: MEOK AI Labs tool.
+  parameters:
+  - name: url
+    type: string
+    required: true
+  - name: payload
+    type: string
+    required: true
+- name: send_desktop_notification
+  description: MEOK AI Labs tool.
+  parameters:
+  - name: title
+    type: string
+    required: true
+  - name: message
+    type: string
+    required: true
+- name: schedule_notification
+  description: MEOK AI Labs tool.
+  parameters:
+  - name: message
+    type: string
+    required: true
+  - name: delay_seconds
+    type: integer
+    required: false
+- name: list_notification_history
+  description: MEOK AI Labs tool.
+  parameters:
+  - name: limit
+    type: integer
+    required: false

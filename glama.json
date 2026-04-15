@@ -1,0 +1,10 @@
+{
+  "name": "notification-ai-mcp",
+  "description": "MEOK AI Labs \u2014 notification-ai-mcp",
+  "vendor": "MEOK AI Labs",
+  "homepage": "https://meok.ai",
+  "repository": "https://github.com/CSOAI-ORG/notification-ai-mcp",
+  "license": "MIT",
+  "runtime": "python",
+  "entryPoint": "mcp-wrapper.py"
+}

@@ -1,5 +1,5 @@
 name: notification-ai-mcp
-description: "notification-ai-mcp \u2014 Built by [MEOK AI Labs](https://meok.ai)"
+description: "MEOK AI Labs \u2014 Send notifications via webhooks."
 version: 1.0.0
 tools:
 - name: send_webhook

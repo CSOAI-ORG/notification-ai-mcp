@@ -1,6 +1,6 @@
 {
   "name": "notification-ai-mcp",
-  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 MEOK AI Labs \u2014 Send notifications via webhooks.",
+  "description": "Notification Ai tools for AI agents. Capabilities: send webhook, send desktop notification, schedule notification. Built by MEOK AI Labs.",
   "version": "1.0.0",
   "tools": [
     {

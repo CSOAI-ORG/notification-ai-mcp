@@ -1,0 +1,54 @@
+{
+  "name": "notification-ai",
+  "description": "In-memory notification system with channels, priorities, and history. By MEOK AI Labs.",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/notification-ai-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "15 calls/day"
+  },
+  "tools": [
+    {
+      "name": "send_notification",
+      "description": "Send a notification with title, message, channel (info/warning/error/success/system), and priority (low/normal/high/urgent)."
+    },
+    {
+      "name": "list_notifications",
+      "description": "List notifications for a recipient, optionally filtered by channel and read status."
+    },
+    {
+      "name": "mark_read",
+      "description": "Mark notifications as read. Provide comma-separated IDs or set mark_all=true."
+    },
+    {
+      "name": "get_preferences",
+      "description": "Get or update notification preferences. Update with JSON: {\"channels\": {\"info\": true, \"warning\": false}, \"max_per_hour\": 30}."
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning",
+    "Agent Infrastructure",
+    "Productivity"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 15
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}

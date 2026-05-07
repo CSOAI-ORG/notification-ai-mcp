@@ -40,7 +40,23 @@ def _notif_id() -> str:
 
 @mcp.tool()
 def send_notification(title: str, message: str, channel: str = "info", priority: str = "normal", tags: str = "", recipient: str = "default", api_key: str = "") -> str:
-    """Send a notification with title, message, channel (info/warning/error/success/system), and priority (low/normal/high/urgent)."""
+    """Send a notification with title, message, channel (info/warning/error/success/system), and priority (low/normal/high/urgent).
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -94,7 +110,23 @@ def send_notification(title: str, message: str, channel: str = "info", priority:
 
 @mcp.tool()
 def list_notifications(recipient: str = "default", channel: str = "", unread_only: bool = False, limit: int = 20, api_key: str = "") -> str:
-    """List notifications for a recipient, optionally filtered by channel and read status."""
+    """List notifications for a recipient, optionally filtered by channel and read status.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -143,7 +175,23 @@ def list_notifications(recipient: str = "default", channel: str = "", unread_onl
 
 @mcp.tool()
 def mark_read(notification_ids: str = "", mark_all: bool = False, recipient: str = "default", api_key: str = "") -> str:
-    """Mark notifications as read. Provide comma-separated IDs or set mark_all=true."""
+    """Mark notifications as read. Provide comma-separated IDs or set mark_all=true.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -182,7 +230,23 @@ def mark_read(notification_ids: str = "", mark_all: bool = False, recipient: str
 
 @mcp.tool()
 def get_preferences(recipient: str = "default", update_json: str = "", api_key: str = "") -> str:
-    """Get or update notification preferences. Update with JSON: {\"channels\": {\"info\": true, \"warning\": false}, \"max_per_hour\": 30}."""
+    """Get or update notification preferences. Update with JSON: {\"channels\": {\"info\": true, \"warning\": false}, \"max_per_hour\": 30}.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})

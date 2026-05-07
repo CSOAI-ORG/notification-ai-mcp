@@ -56,6 +56,16 @@ def send_notification(title: str, message: str, channel: str = "info", priority:
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        title (str): The title to analyze or process.
+        message (str): The message to analyze or process.
+        channel (str): The channel to analyze or process.
+        priority (str): The priority to analyze or process.
+        tags (str): The tags to analyze or process.
+        recipient (str): The recipient to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -140,6 +150,14 @@ def list_notifications(recipient: str = "default", channel: str = "", unread_onl
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        recipient (str): The recipient to analyze or process.
+        channel (str): The channel to analyze or process.
+        unread_only (bool): The unread only to analyze or process.
+        limit (int): The limit to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -219,6 +237,13 @@ def mark_read(notification_ids: str = "", mark_all: bool = False, recipient: str
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        notification_ids (str): The notification ids to analyze or process.
+        mark_all (bool): The mark all to analyze or process.
+        recipient (str): The recipient to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -288,7 +313,12 @@ def get_preferences(recipient: str = "default", update_json: str = "", api_key: 
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
-    """
+    
+
+    Args:
+        recipient (str): The recipient to analyze or process.
+        update_json (str): The update json to analyze or process.
+        api_key (str): The api key to analyze or process."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""In-memory notification system with channels, priorities, and history. — MEOK AI Labs."""
+"""
+In-memory notification system with channels, priorities, and history. — MEOK AI Labs."""
 
 import sys, os
-sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
 from auth_middleware import check_access
 
 import json, hashlib
@@ -83,7 +83,7 @@ def send_notification(title: str, message: str, channel: str = "info", priority:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl():
         return err
 
@@ -175,7 +175,7 @@ def list_notifications(recipient: str = "default", channel: str = "", unread_onl
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl():
         return err
 
@@ -261,7 +261,7 @@ def mark_read(notification_ids: str = "", mark_all: bool = False, recipient: str
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl():
         return err
 
@@ -321,7 +321,7 @@ def get_preferences(recipient: str = "default", update_json: str = "", api_key: 
         api_key (str): The api key to analyze or process."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl():
         return err
 
@@ -371,5 +371,8 @@ def get_preferences(recipient: str = "default", update_json: str = "", api_key: 
     })
 
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,33 @@
+# notification-ai-mcp
+# **MCP server for notification ai mcp operations**
+
+## Install
+```bash
+pip install notification-ai-mcp
+```
+
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
+
+## Tools
+
+### `send_notification`
+Send a notification with title, message, channel (info/warning/error/success/system), and priority (low/normal/high/urgent).
+
+### `list_notifications`
+List notifications for a recipient, optionally filtered by channel and read status.
+
+### `mark_read`
+Mark notifications as read. Provide comma-separated IDs or set mark_all=true.
+
+### `get_preferences`
+Get or update notification preferences. Update with JSON: {\
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.

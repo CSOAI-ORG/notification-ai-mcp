@@ -1,0 +1,9 @@
+# notification-ai-mcp - Auto-trigger Rules
+
+When the user asks about notification, use notification-ai-mcp tools: send_notification, list_notifications, mark_read, get_preferences
+
+**MCP server for notification ai mcp operations**
+
+Install: `pip install notification-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.

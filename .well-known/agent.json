@@ -1,0 +1,59 @@
+{
+  "name": "notification-ai-mcp",
+  "description": "Notification Ai MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/notification-ai-mcp.html",
+  "version": "1.0.6",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "send_notification",
+      "name": "Send Notification",
+      "description": "send_notification via notification-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "list_notifications",
+      "name": "List Notifications",
+      "description": "list_notifications via notification-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "mark_read",
+      "name": "Mark Read",
+      "description": "mark_read via notification-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "get_preferences",
+      "name": "Get Preferences",
+      "description": "get_preferences via notification-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}
